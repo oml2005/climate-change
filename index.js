@@ -106,33 +106,7 @@ app.get('/news/:newspaperId',async (req,res)=>{
 
 })
 
-// app.get('/news/:newspaperId', async (req, res) => {
-//     const newspaperId =req.params.newspaperId
-//     const newspaperAddress =newspapers.filter(newspaper=>newspaper.name==newspaperId)[0].address
-//     const newspaperBase =newspapers.filter(newspaper=>newspaper.name==newspaperId)[0].base
-//     console.log('id      : '+newspaperId)    
-//     console.log('address : '+newspaperBase+newspaperAddress)
-
-
-//      axios.get(newspaperAddress)
-//     .then(  (response) =>  {
-//         const html = response.data
-//       //  console.log(html)
-//       const $ = cheerio.load(html)
-//       const specificArticles = []
-//       $('a:contains("climate")',html).each(function() {
-//          const title = $(this).text() 
-//          const url = $(this).attr('href') 
-//          speificArticles.push ({
-//             title,
-//             url:newspaperBase+url,
-//             source: newspaperId
-//          })
-//       })
-//       res.json(specificArticles)
-//     }).catch((err)=>console.log(err))
-//     //res.json(articles)
-// })
 
 app.listen( PORT, ()=> console.log(`server running on PORT ${PORT}`)   )
 console.log("running...")
+
